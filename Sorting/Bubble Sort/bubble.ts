@@ -1,4 +1,4 @@
-const array: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+const bubbleArray: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function bubbleSorter(numbers:number[]) {
   let isSorted: boolean = false;
@@ -14,5 +14,5 @@ function bubbleSorter(numbers:number[]) {
   }
 }
 
-bubbleSorter(array);
-console.log(array);
+bubbleSorter(bubbleArray);
+console.log(bubbleArray);
