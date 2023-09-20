@@ -1,8 +1,16 @@
-def reverse(str):
-    if len(str) < 2:
-        return str
-    else:
-        return str[len(str)-1] + reverse(str[0:len(str)-1])
+def solution(s):
+    array = []
+#     while string length > 1 array += [:2] 
+    while len(s)> 0:
+        print(len(s))
+        if len(s) == 1:
+            array.append(s+"_")
+            return array
+        else:
+            array.append(s[:2])
+            s = s[slice(2,len(s))]
+    return array
 
-strings = "Domino Ameno"
-print(reverse(strings))
+
+
+print(solution("Abacadaba"))

@@ -1,8 +1,15 @@
 def fibo(number):
-    if number < 2:
-        return 1
-    return fibo(number-1)+fibo(number-2)
+    cache = {}
+    def fibonacci(number):
+        if number < 2:
+            return 1
+        if number in cache:
+            return cache[number]
+        return fibo(number-1)+fibo(number-2)
     
-example = fibo(39) # expected 89
+    return  fibonacci(number)
+   
+    
+example = fibo(15) # expected 89
 print(example)
 
